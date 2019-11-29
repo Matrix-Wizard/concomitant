@@ -27,6 +27,7 @@ a {
   background-color: #ffffff;
   border-top: 5px solid #81b300;
   padding: 36px 30px;
+  position: relative;
 }
 
 .header__logo {
@@ -72,5 +73,46 @@ a {
 
 .header__options-item a:hover {
   color: #374d00;
+}
+
+.header__sosial-links {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 251px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #81b300;
+  border-radius: 0 0 15px 15px;
+}
+
+.header__sosial-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__sosial-links a:hover {
+  background-color: #00acee;
+}
+
+.header__sosial-links a i {
+  font-size: 16px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

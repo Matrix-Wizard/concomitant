@@ -20,6 +20,7 @@ a
   background-color: #ffffff
   border-top: 5px solid $color1
   padding: 36px 30px
+  position: relative
 
   &__logo
     color: #333333
@@ -47,6 +48,29 @@ a
         color: $color1
         &:hover
           color: darken($color1, 20%)
+  &__sosial-links
+    position: absolute
+    top: 0
+    right: 30px
+    width: 251px
+    display: flex
+    justify-content: space-between
+    padding: 8px 12px
+    background-color: #81b300
+    border-radius: 0 0 15px 15px
+    & a
+      display: flex
+      width: 32px
+      height: 32px
+      background-color: #1f1f1f
+      border-radius: 50%
+      justify-content: center
+      align-items: center
+      &:hover
+        background-color: #00acee
+      & i
+        font-size: 16px
+        color: #fff
 
 
   
