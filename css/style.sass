@@ -1,0 +1,52 @@
+$color1: #81b300
+  
+body
+  font-family: 'Geo', sans-serif
+  // background-color: #1f1f1f
+.container
+  max-width: 960px
+  margin: 30px auto
+  border: 1px solid black
+.flex
+  display: flex
+  justify-content: space-between
+a
+  text-decoration: none
+  outline: none !important
+
+
+/* header */
+.header
+  background-color: #ffffff
+  border-top: 5px solid $color1
+  padding: 36px 30px
+
+  &__logo
+    color: #333333
+    font-size: 36px
+    font-weight: 400
+    text-transform: uppercase
+    &:first-letter
+      font-size: 46px
+  &__sublogo
+    color: #999999
+    font-size: 12px
+    font-weight: 400
+  &__options
+    display: flex
+    align-items: flex-end
+    color: $color1
+    font-size: 12px
+    font-weight: 400
+    &-item:after
+      content: " |\00A0"
+    &-item:last-child:after
+      content: none
+    &-item
+      & a
+        color: $color1
+        &:hover
+          color: darken($color1, 20%)
+
+
+  

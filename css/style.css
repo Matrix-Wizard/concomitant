@@ -1,0 +1,76 @@
+body {
+  font-family: 'Geo', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  border: 1px solid black;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  outline: none !important;
+}
+
+/* header */
+.header {
+  background-color: #ffffff;
+  border-top: 5px solid #81b300;
+  padding: 36px 30px;
+}
+
+.header__logo {
+  color: #333333;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.header__logo:first-letter {
+  font-size: 46px;
+}
+
+.header__sublogo {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #81b300;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header__options-item:after {
+  content: " |\00A0";
+}
+
+.header__options-item:last-child:after {
+  content: none;
+}
+
+.header__options-item a {
+  color: #81b300;
+}
+
+.header__options-item a:hover {
+  color: #374d00;
+}
+/*# sourceMappingURL=style.css.map */
