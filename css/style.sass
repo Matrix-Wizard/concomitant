@@ -1,12 +1,18 @@
 $color1: #81b300
-  
+
+*
+  box-sizing: border-box
+img
+  max-width: 100%
 body
-  font-family: 'Geo', sans-serif
-  // background-color: #1f1f1f
-.container
+  font-family: Georgia, serif
+  background-color: #ebebeb
+.container2
   max-width: 960px
   margin: 30px auto
-  border: 1px solid black
+  // border: 1px solid black
+  background-color: #fff
+  padding: 0 30px
 .flex
   display: flex
   justify-content: space-between
@@ -16,10 +22,14 @@ a
 
 
 /* header */
+.line
+  height: 5px
+  background-color: $color1
+  margin: 0 -30px
 .header
   background-color: #ffffff
-  border-top: 5px solid $color1
-  padding: 36px 30px
+  // border-top: 5px solid $color1
+  padding: 36px 0
   position: relative
 
   &__logo
@@ -48,29 +58,371 @@ a
         color: $color1
         &:hover
           color: darken($color1, 20%)
-  &__sosial-links
+  &_sosial-links
     position: absolute
     top: 0
-    right: 30px
-    width: 251px
-    display: flex
-    justify-content: space-between
-    padding: 8px 12px
-    background-color: #81b300
+    right: 0
     border-radius: 0 0 15px 15px
-    & a
-      display: flex
-      width: 32px
-      height: 32px
-      background-color: #1f1f1f
-      border-radius: 50%
-      justify-content: center
-      align-items: center
+.sosial-links
+  width: 252px
+  display: flex
+  justify-content: space-between
+  padding: 8px 12px
+  background-color: #81b300
+  a
+    display: flex
+    width: 32px
+    height: 32px
+    background-color: #1f1f1f
+    border-radius: 50%
+    justify-content: center
+    align-items: center
+    transition-duration: 0.5s
+    &:hover
+      background-color: #00acee
+    i
+      font-size: 16px
+      color: #fff
+
+@media (max-width: 600px)
+  .container2
+    margin-top: 0
+    margin-bottom: 0
+  .header
+    padding-top: 60px
+    flex-direction: column
+    align-items: center
+    &__wrap-logo
+      margin-bottom: 20px
+      text-align: center
+    &__options
+      font-size: 14px
+    &_sosial-links
+      top: 0
+      left: 50%
+      margin-left: -126px
+
+@media (max-width: 360px)
+  .header__options
+    font-size: 12px
+    
+      
+// navigation
+.navigation
+  background-color: $color1
+  margin: 0px -30px
+  padding: 20px 30px
+  align-items: center
+  &__menu
+    a
+      color: #ffffff
+      font-size: 13px
+      font-weight: 400
+      text-transform: uppercase
+      margin-right: 20px
       &:hover
-        background-color: #00acee
-      & i
-        font-size: 16px
-        color: #fff
+        color: #000000
+
+  form
+    width: 282px
+    font-size: 12px
+    font-weight: 400
+    height: 30px
+    display: flex
+    input[type=search]
+      height: 26px
+      padding-left: 9px
+      border: 1px solid #dddddd
+      outline: none
+      color: #7f7f7f
+      flex-grow: 1
+      background-color: #fff
+      &:focus 
+        border: 1px solid darken($color1, 5%)
+    input[type=submit]
+      height: inherit
+      border: 1px solid #dddddd
+      outline: none
+      background-color: #fff
+      color: #81b300
+      font-weight: bold
+      text-transform: uppercase
+      &:focus
+        border: 1px solid darken($color1, 5%)
+      &:hover
+        background-color: lighten($color1, 50%)
+
+@media (max-width: 900px)
+  .navigation
+    flex-direction: column
+    &__menu
+      margin-bottom: 15px
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      a
+        margin-bottom: 10px
+        margin-right: 10px
+        margin-left: 10px
+
+    form
+      max-width: 230px
 
 
-  
+// slider
+.slider
+  background-color: #f2f2f2
+  margin: 0px -30px
+  padding: 30px 30px
+  text-align: center
+  &_border
+    padding: 9px
+    border: 1px solid #f2f2f2
+    background-color: #fff
+
+
+
+
+
+
+// benefits
+.benefits
+  display: flex
+  justify-content: space-between
+  padding-top: 50px
+  padding-bottom: 50px
+  &__item
+    text-align: center
+    flex-basis: 25%
+    margin-right: 25px
+    &:nth-child(4)
+      margin-right: 0
+    i
+      font-size: 70px
+      margin-bottom: 15px
+    h2
+      color: $color1
+      font-size: 18px
+      font-weight: 400
+      margin-bottom: 15px
+    p
+      color: #888888
+      font-size: 13px
+      font-weight: 400
+      line-height: 20.8px
+      max-width: 203px
+      margin: 0 auto
+    &_users
+      color: #c45f4b
+    &_earth
+      color: #cf9d41
+    &_cogs
+      color: #3d5f12
+    &_leaf
+      color: #7da3b7
+    
+
+@media (max-width: 770px)
+  .benefits
+    flex-wrap: wrap
+    &__item
+      flex-basis: 50%  
+      margin-right: 0
+      margin-bottom: 25px
+      &:last-child
+        margin-bottom: 0
+      &:nth-last-child(-n+2)
+        margin-bottom: 0
+
+@media (max-width: 500px)
+  .benefits
+    &__item
+      flex-basis: 100%
+      &:nth-last-child(-n+2)
+        margin-bottom: 25px
+      &:last-child
+        margin-bottom: 0
+
+.divider
+  background-color: #e2e2e2
+  margin: 0
+
+
+// projects
+.projects
+  padding: 50px 0
+  display: flex
+  // flex-wrap: wrap
+  justify-content: space-between
+  &__item
+    margin-right: 25px
+    &:nth-child(4)
+      margin-right: 0
+    img
+      padding: 4px
+      border: 1px solid #e2e2e2
+      margin-bottom: 18px
+    h3
+      margin-bottom: 12px
+      color: #444444
+      font-size: 14px
+      font-weight: 400
+    p
+      margin-bottom: 12px
+      color: #878787
+      font-size: 13px
+      font-weight: 400
+      line-height: 20.8px
+      max-width: 208px
+    a
+      color: $color1
+      font-size: 13px
+      font-weight: 400
+      display: block
+      text-align: right
+      max-width: 208px
+      &:hover
+        color: darken($color1, 10%)
+
+@media (max-width: 850px)
+  .projects
+    flex-wrap: wrap
+    &__item
+      margin-right: 0px
+      margin-bottom: 15px
+      padding-left: 5px
+      padding-right: 5px
+
+@media (max-width: 520px)
+  .projects
+    flex-direction: column
+    align-items: center
+    &__item:last-child
+      margin-bottom: 0
+      
+
+
+
+// footer
+.footer
+  background-color: #3b3b3b
+  padding: 22px 30px
+  margin: 0 -30px
+  flex-wrap: wrap
+  &__item
+    flex-basis: calc(25% - 15px)
+    min-width: 180px
+    margin-bottom: 20px
+    h3
+      color: #666666
+      font-size: 13px
+      font-weight: 400
+      line-height: 15.6px
+      text-transform: uppercase
+    h5
+      color: #999999
+      font-size: 13px
+      font-weight: bold
+    p
+      color: #999999
+      font-size: 13px
+      font-weight: 400
+      line-height: 20.8px
+    small
+      color: #999999
+      font-size: 11px
+      font-weight: 400
+      display: block
+      margin-bottom: 11px
+    span
+      font-size: 12px
+      display: block
+      color: #999999
+      font-weight: 400
+      line-height: 19.2px
+    a
+      color: $color1
+      font-size: 12px
+      font-weight: 400
+      display: block
+      text-align: right
+      &:hover
+        color: darken($color1, 10%)
+
+    &_margin
+      h3
+        margin-bottom: 30px
+      p
+        margin-bottom: 20px
+      h5
+        margin-bottom: 7px
+    ul
+      li
+        color: #999999
+        font-size: 12px
+        font-weight: 400
+        line-height: 14.4px
+        border-bottom: 1px solid #484848
+        padding-bottom: 10px
+        padding-top: 10px
+        cursor: pointer
+        &:first-child
+          padding-top: 0
+        &:hover
+          color: #fff
+  &__form
+    input
+      background-color: #1f1f1f
+      height: 30px
+    input[type="text"], input[type="email"]
+      width: 100%
+      margin-bottom: 10px
+      border-radius: 5px
+      padding-left: 10px
+      color: #999999
+      border: none
+    input:focus
+      border: 1px solid $color1
+
+
+    input[type="submit"]
+      text-align: center
+      border: none
+      border-radius: 5px
+      color: #81b300
+      font-size: 13px
+      font-weight: bold
+      line-height: 30px
+      text-transform: uppercase
+      cursor: pointer
+      padding-left: 12px
+      padding-right: 12px
+      &:hover
+        background-color: #666666
+
+
+
+@media (max-width: 450px)
+  .footer
+    flex-direction: column
+
+
+
+
+// copyright
+.copyright
+  background-color: #2e2e2e
+  padding: 22px 30px
+  margin: 0 -30px
+  &__text, &__template
+    color: #737373
+    font-size: 12px
+    font-weight: 400
+@media (max-width: 520px)
+  .copyright
+    flex-direction: column
+    align-items: center
+    &__text
+      margin-bottom: 15px
+      text-align: center
+      line-height: 1.3
